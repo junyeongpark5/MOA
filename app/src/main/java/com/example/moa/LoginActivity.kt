@@ -3,10 +3,7 @@ package com.example.moa
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -25,13 +22,14 @@ class LoginActivity : AppCompatActivity() {
             )
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(this, "성공!", Toast.LENGTH_SHORT).show()
+                        val loginintent = Intent(this,MainActivity2::class.java)
+                        startActivity(loginintent)
                     } else {
                         Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
-        findViewById<TextView>(R.id.tv_2).setOnClickListener {
+        findViewById<ImageView>(R.id.iv_2).setOnClickListener {
             val signupintent = Intent(this,SignupActivity::class.java)
 
             startActivity(signupintent)

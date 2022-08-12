@@ -22,7 +22,7 @@ class SignupActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tv_login).setOnClickListener {
             sigininAndSignup()
-            val loginintent = Intent(this,LoginActivity::class.java)
+            val loginintent = Intent(this,MainActivity2::class.java)
             startActivity(loginintent)
         }
     }
@@ -61,7 +61,8 @@ class SignupActivity : AppCompatActivity() {
     }
     fun MovemainPage(user: FirebaseUser?){ //task람다 형식으로 로그인
         if(user != null){
-            startActivity(Intent(this,MainActivity::class.java))
+            val loginintent = Intent(this,MainActivity2::class.java)
+            startActivity(loginintent)
         }
     }
 }
