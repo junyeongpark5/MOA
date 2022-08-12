@@ -32,6 +32,9 @@ class LoginActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.iv_2).setOnClickListener {
             val signupintent = Intent(this,SignupActivity::class.java)
 
+
+
+
             startActivity(signupintent)
         }
     }
